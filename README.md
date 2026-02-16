@@ -26,7 +26,7 @@
 
 ## Установка
 
-1. Установите [Violentmonkey]((https://violentmonkey.github.io/)) для вашего браузера.  
+1. Установите [Violentmonkey](https://violentmonkey.github.io/) для вашего браузера.  
 2. [Установить скрипт через Violentmonkey](https://raw.githubusercontent.com/klondike0x/ChatGPT-Enhancer/main/ChatGPT-Enhancer.user.js).
 
 Теперь кнопка «Отправить» будет активной, лишние элементы удалены, и Enter отправляет сообщение.
