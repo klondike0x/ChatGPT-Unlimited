@@ -52,19 +52,30 @@
   // ---------------------------
   // LIMIT DETECTOR
   // ---------------------------
-  function detectLimit() {
-    const text = document.body.innerText.toLowerCase();
+function detectLimit() {
+  const errorBlocks = document.querySelectorAll('[data-testid="conversation-turn"], .text-token-text-error');
+
+  let hasLimit = false;
+
+  errorBlocks.forEach(el => {
+    const text = el.innerText.toLowerCase();
 
     if (
-      text.includes("limit") ||
-      text.includes("лимит") ||
-      text.includes("you are out of")
+      text.includes("исчерпали") ||
+      text.includes("limit reached") ||
+      text.includes("try again later") ||
+      text.includes("лимит")
     ) {
-      updateStatus("LIMIT");
-    } else {
-      updateStatus(enabled ? "ON" : "OFF");
+      hasLimit = true;
     }
+  });
+
+  if (hasLimit) {
+    updateStatus("LIMIT");
+  } else {
+    updateStatus(enabled ? "ON" : "OFF");
   }
+}
 
   // ---------------------------
   // BADGE
