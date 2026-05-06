@@ -40,3 +40,4 @@ If you need to change button selectors or elements, you can do so directly in th
 ```javascript
 document.querySelector('button[aria-label="Отправить подсказку"]');
 document.querySelector('div.absolute.start-0.end-0.bottom-full.-z-1');
+```
