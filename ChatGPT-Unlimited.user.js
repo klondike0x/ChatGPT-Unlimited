@@ -23,7 +23,7 @@
   // ---------------------------
   function getSendButton() {
     return document.querySelector(
-      'button[data-testid="send-button"], button[type="submit"]'
+      'button[data-testid="send-button"], button[type="submit"]',
     );
   }
 
@@ -43,46 +43,46 @@
   function removeOverlay() {
     if (!enabled) return;
 
-    const el = document.querySelector(
-      "div.absolute.start-0.end-0.bottom-full"
-    );
+    const el = document.querySelector("div.absolute.start-0.end-0.bottom-full");
     if (el) el.remove();
   }
 
   // ---------------------------
   // LIMIT DETECTOR
   // ---------------------------
-function detectLimit() {
-  const errorBlocks = document.querySelectorAll('[data-testid="conversation-turn"], .text-token-text-error');
+  function detectLimit() {
+    const errorBlocks = document.querySelectorAll(
+      '[data-testid="conversation-turn"], .text-token-text-error',
+    );
 
-  let hasLimit = false;
+    let hasLimit = false;
 
-  errorBlocks.forEach(el => {
-    const text = el.innerText.toLowerCase();
+    errorBlocks.forEach((el) => {
+      const text = el.innerText.toLowerCase();
 
-    if (
-      text.includes("исчерпали") ||
-      text.includes("limit reached") ||
-      text.includes("try again later") ||
-      text.includes("лимит")
-    ) {
-      hasLimit = true;
+      if (
+        text.includes("исчерпали") ||
+        text.includes("limit reached") ||
+        text.includes("try again later") ||
+        text.includes("лимит")
+      ) {
+        hasLimit = true;
+      }
+    });
+
+    if (hasLimit) {
+      updateStatus("LIMIT");
+    } else {
+      updateStatus(enabled ? "ON" : "OFF");
     }
-  });
-
-  if (hasLimit) {
-    updateStatus("LIMIT");
-  } else {
-    updateStatus(enabled ? "ON" : "OFF");
   }
-}
 
   // ---------------------------
   // BADGE
   // ---------------------------
   function addBadge() {
     const wordmark = document.querySelector(
-      'button[data-testid="model-switcher-dropdown-button"] .header-wordmark'
+      'button[data-testid="model-switcher-dropdown-button"] .header-wordmark',
     );
 
     if (!wordmark) return;
@@ -155,7 +155,7 @@ function detectLimit() {
   // ---------------------------
   function addToggle() {
     const container = document.querySelector(
-      '[data-testid="thread-header-right-actions"]'
+      '[data-testid="thread-header-right-actions"]',
     );
 
     if (!container) return;
@@ -248,10 +248,7 @@ function detectLimit() {
         if (e.key !== "Enter" || e.shiftKey) return;
 
         const active = document.activeElement;
-        if (
-          !active ||
-          !active.closest('[contenteditable="true"], textarea')
-        )
+        if (!active || !active.closest('[contenteditable="true"], textarea'))
           return;
 
         const btn = getSendButton();
@@ -260,7 +257,7 @@ function detectLimit() {
         e.preventDefault();
         btn.click();
       },
-      true
+      true,
     );
   }
 
