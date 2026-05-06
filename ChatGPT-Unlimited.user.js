@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         ChatGPT-Unlimited
-// @namespace    https://github.com/klondike0x/ChatGPT-Enhancer
+// @namespace    https://github.com/klondike0x/ChatGPT-Unlimited
 // @version      2.0.0
 // @description  Убирает лимит сообщение в ChatGPT
 // @author       klondike0x
 // @match        *://chatgpt.com/*
-// @icon         https://raw.githubusercontent.com/klondike0x/ChatGPT-Enhancer/refs/heads/main/canvas.png
-// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Enhancer/main/ChatGPT-Enhancer.user.js
-// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Enhancer/main/ChatGPT-Enhancer.user.js
+// @icon         https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/refs/heads/main/canvas.png
+// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
+// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
 // @grant        none
 // ==/UserScript==
 
