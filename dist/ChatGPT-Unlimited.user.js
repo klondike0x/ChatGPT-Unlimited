@@ -6,8 +6,8 @@
 // @author       klondike0x
 // @match        *://chatgpt.com/*
 // @icon         https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/refs/heads/main/assets/icon.png
-// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js?update=1
-// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js?update=1
+// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/dist/ChatGPT-Unlimited.user.js?update=1
+// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/dist/ChatGPT-Unlimited.user.js?update=1
 // @grant        none
 // ==/UserScript==
 
