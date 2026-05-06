@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ChatGPT-Unlimited
 // @homepageURL  https://github.com/klondike0x/ChatGPT-Unlimited
-// @version      2.0.0
+// @version      2.0.1
 // @description  Removes message limits in ChatGPT
 // @author       klondike0x
 // @match        *://chatgpt.com/*
