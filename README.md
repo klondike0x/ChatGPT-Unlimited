@@ -1,43 +1,104 @@
-# ChatGPT Unlimited
+# 🚀 ChatGPT Unlimited
 
-### Русский | [English](https://github.com/klondike0x/ChatGPT-Enhancer/blob/main/README_EN.md)
-
-**ChatGPT Unlimited** — пользовательский скрипт для Violentmonkey, который улучшает взаимодействие с интерфейсом ChatGPT.
+Enhance your ChatGPT experience with UI tweaks, improved controls, and removal of common frontend limitations.
 
 ---
 
-## Что делает скрипт
+## 🌍 Language / Язык
 
-- **Поддерживает кнопку "Отправить" в активном состоянии**  
-  Даже если сайт временно блокирует кнопку, скрипт следит за ней и оставляет её кликабельной.
-
-- **Удаляет вспомогательные элементы интерфейса**  
-  Некоторые служебные блоки, мешающие визуально, автоматически удаляются.
-
-- **Восстанавливает отправку сообщений по клавише Enter**  
-  Shift+Enter по-прежнему добавляет перенос строки, Enter отправляет сообщение.
-
-- **Работает с динамически обновляемым DOM**  
-  Любые изменения на странице отслеживаются, так что функционал сохраняется даже после подгрузки новых элементов.
-
-> ⚠️ Скрипт работает только на стороне браузера и не изменяет логику сервера.  
+* 🇺🇸 English
+* 🇷🇺 Русский
 
 ---
 
-## Установка
+<details open>
+<summary>🇺🇸 English</summary>
 
-1. Установите [Violentmonkey](https://violentmonkey.github.io/) для вашего браузера.  
-2. [Установить скрипт через Violentmonkey](https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js).
+## ✨ Features
 
-Теперь кнопка «Отправить» будет активной, лишние элементы удалены, и Enter отправляет сообщение.
+* 🔓 Unlocks disabled send button
+* ⌨️ Send messages with **Enter**
+* 🎨 UI enhancements and visual improvements
+* 🧠 Smart interface tweaks
+* 🚀 Bypasses common frontend limitations
 
 ---
 
-## Настройка
+## ⚠️ Disclaimer
 
-Если необходимо изменить селекторы кнопки или элементов, это можно сделать прямо в скрипте, например:
+This script works only on the client-side (UI layer).
+Actual usage limits are controlled by OpenAI servers and may still apply.
 
-```javascript
-document.querySelector('button[aria-label="Отправить подсказку"]');
-document.querySelector('div.absolute.start-0.end-0.bottom-full.-z-1');
-```
+---
+
+## 📦 Installation
+
+1. Install **Tampermonkey**
+2. Open the script:
+   https://github.com/klondike0x/ChatGPT-Unlimited/raw/main/ChatGPT-Unlimited.user.js
+3. Click **Install**
+
+---
+
+## 🔄 Auto Update
+
+The script updates automatically via GitHub.
+
+---
+
+## 📌 Notes
+
+Use responsibly.
+This project is created for UI enhancement and educational purposes.
+
+</details>
+
+---
+
+<details>
+<summary>🇷🇺 Русский</summary>
+
+## ✨ Возможности
+
+* 🔓 Разблокировка кнопки отправки
+* ⌨️ Отправка сообщений по **Enter**
+* 🎨 Улучшение интерфейса
+* 🧠 Оптимизация UI
+* 🚀 Обход некоторых ограничений интерфейса
+
+---
+
+## ⚠️ Важно
+
+Скрипт работает только на уровне интерфейса (UI).
+Фактические лимиты устанавливаются серверами OpenAI и могут сохраняться.
+
+---
+
+## 📦 Установка
+
+1. Установите **Tampermonkey**
+2. Откройте скрипт:
+   https://github.com/klondike0x/ChatGPT-Unlimited/raw/main/ChatGPT-Unlimited.user.js
+3. Нажмите **Установить**
+
+---
+
+## 🔄 Автообновление
+
+Скрипт автоматически обновляется через GitHub.
+
+---
+
+## 📌 Примечание
+
+Используйте с умом.
+Проект создан для улучшения интерфейса и обучения.
+
+</details>
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
