@@ -1,8 +1,8 @@
-# ChatGPT Enhancer
+# ChatGPT Unlimited
 
 ### Русский | [English](https://github.com/klondike0x/ChatGPT-Enhancer/blob/main/README_EN.md)
 
-**ChatGPT Enhancer** — пользовательский скрипт для Violentmonkey, который улучшает взаимодействие с интерфейсом ChatGPT.
+**ChatGPT Unlimited** — пользовательский скрипт для Violentmonkey, который улучшает взаимодействие с интерфейсом ChatGPT.
 
 ---
 
@@ -27,7 +27,7 @@
 ## Установка
 
 1. Установите [Violentmonkey](https://violentmonkey.github.io/) для вашего браузера.  
-2. [Установить скрипт через Violentmonkey](https://raw.githubusercontent.com/klondike0x/ChatGPT-Enhancer/main/ChatGPT-Enhancer.user.js).
+2. [Установить скрипт через Violentmonkey](https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js).
 
 Теперь кнопка «Отправить» будет активной, лишние элементы удалены, и Enter отправляет сообщение.
 
