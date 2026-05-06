@@ -1,0 +1,7 @@
+{
+  "name": "chatgpt-unlimited",
+  "version": "2.0.1",
+  "scripts": {
+    "build": "node build/build.js"
+  }
+}
