@@ -40,3 +40,4 @@
 ```javascript
 document.querySelector('button[aria-label="Отправить подсказку"]');
 document.querySelector('div.absolute.start-0.end-0.bottom-full.-z-1');
+```
