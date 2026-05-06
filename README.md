@@ -34,8 +34,7 @@ Actual usage limits are controlled by OpenAI servers and may still apply.
 ## 📦 Installation
 
 1. Install **Tampermonkey**
-2. Open the script:
-   https://github.com/klondike0x/ChatGPT-Unlimited/raw/main/ChatGPT-Unlimited.user.js
+2. Open the script: https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
 3. Click **Install**
 
 ---
@@ -78,8 +77,7 @@ This project is created for UI enhancement and educational purposes.
 ## 📦 Установка
 
 1. Установите **Tampermonkey**
-2. Откройте скрипт:
-   https://github.com/klondike0x/ChatGPT-Unlimited/raw/main/ChatGPT-Unlimited.user.js
+2. Откройте скрипт: https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
 3. Нажмите **Установить**
 
 ---
