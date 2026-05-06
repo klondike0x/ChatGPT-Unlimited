@@ -18,9 +18,12 @@
   let enabled = localStorage.getItem(STORAGE_KEY) !== "false";
   let ticking = false;
 
+  // ---------------------------
+  // BUTTON
+  // ---------------------------
   function getSendButton() {
     return document.querySelector(
-      'button[data-testid="send-button"], button[type="submit"]',
+      'button[data-testid="send-button"], button[type="submit"]'
     );
   }
 
@@ -34,13 +37,21 @@
     btn.removeAttribute("disabled");
   }
 
+  // ---------------------------
+  // OVERLAY FIX
+  // ---------------------------
   function removeOverlay() {
     if (!enabled) return;
 
-    const el = document.querySelector("div.absolute.start-0.end-0.bottom-full");
+    const el = document.querySelector(
+      "div.absolute.start-0.end-0.bottom-full"
+    );
     if (el) el.remove();
   }
 
+  // ---------------------------
+  // LIMIT DETECTOR
+  // ---------------------------
   function detectLimit() {
     const text = document.body.innerText.toLowerCase();
 
@@ -55,56 +66,61 @@
     }
   }
 
+  // ---------------------------
+  // BADGE
+  // ---------------------------
   function addBadge() {
     const wordmark = document.querySelector(
-      'button[data-testid="model-switcher-dropdown-button"] .header-wordmark',
+      'button[data-testid="model-switcher-dropdown-button"] .header-wordmark'
     );
 
     if (!wordmark) return;
-
     if (wordmark.parentElement.querySelector(".klondike-badge")) return;
 
     const badge = document.createElement("span");
     badge.className = "klondike-badge";
 
     badge.innerHTML = `
-            <span class="dot"></span>
-            <span class="text">Enhancer</span>
-        `;
+      <span class="dot"></span>
+      <span class="text">Enhancer</span>
+    `;
 
     const style = document.createElement("style");
     style.textContent = `
-            .klondike-badge {
-                display:inline-flex;
-                align-items:center;
-                gap:5px;
-                margin-left:8px;
-                padding:2px 8px;
-                border-radius:999px;
-                font-size:11px;
-                background:rgba(255,255,255,0.08);
-                color:#94a3b8;
-            }
+      .klondike-badge {
+        display:inline-flex;
+        align-items:center;
+        gap:5px;
+        margin-left:8px;
+        padding:2px 8px;
+        border-radius:999px;
+        font-size:11px;
+        background:rgba(255,255,255,0.08);
+        color:#94a3b8;
+      }
 
-            .klondike-badge .dot {
-                width:6px;
-                height:6px;
-                border-radius:50%;
-                background:#22c55e;
-                animation:pulse 1.5s infinite;
-            }
+      .klondike-badge .dot {
+        width:6px;
+        height:6px;
+        border-radius:50%;
+        background:#22c55e;
+        animation:pulse 1.5s infinite;
+      }
 
-            @keyframes pulse {
-                0% { opacity:0.3; }
-                50% { opacity:1; }
-                100% { opacity:0.3; }
-            }
-        `;
+      @keyframes pulse {
+        0% { opacity:0.3; }
+        50% { opacity:1; }
+        100% { opacity:0.3; }
+      }
+    `;
 
     document.head.appendChild(style);
     wordmark.parentElement.appendChild(badge);
   }
 
+  // ---------------------------
+  // STATUS
+  // ---------------------------
   function updateStatus(state) {
     const badge = document.querySelector(".klondike-badge .text");
     const dot = document.querySelector(".klondike-badge .dot");
@@ -123,22 +139,21 @@
     }
   }
 
+  // ---------------------------
+  // TOGGLE BUTTON (HEADER)
+  // ---------------------------
   function addToggle() {
     const container = document.querySelector(
-      '[data-testid="thread-header-right-actions"]',
+      '[data-testid="thread-header-right-actions"]'
     );
 
     if (!container) return;
-
-    // не дублируем
     if (document.getElementById("enhancer-toggle")) return;
 
     const btn = document.createElement("button");
     btn.id = "enhancer-toggle";
 
     btn.textContent = enabled ? "Enhancer ON" : "Enhancer OFF";
-
-    btn.className = "btn relative";
 
     Object.assign(btn.style, {
       padding: "6px 10px",
@@ -158,11 +173,43 @@
 
       btn.textContent = enabled ? "Enhancer ON" : "Enhancer OFF";
       updateStatus(enabled ? "ON" : "OFF");
+
+      if (!enabled) restoreTooltip();
     };
 
     container.appendChild(btn);
   }
 
+  // ---------------------------
+  // TOOLTIP TEXT PATCH
+  // ---------------------------
+  function replaceTooltip() {
+    if (!enabled) return;
+
+    document
+      .querySelectorAll('[data-keyboard-action="composerSubmit"] span')
+      .forEach((el) => {
+        if (!el.dataset.enhancer) {
+          el.textContent = "Отправить подсказку";
+          el.dataset.enhancer = "true";
+        }
+      });
+  }
+
+  function restoreTooltip() {
+    document
+      .querySelectorAll('[data-keyboard-action="composerSubmit"] span')
+      .forEach((el) => {
+        if (el.dataset.enhancer) {
+          el.textContent = "Send message";
+          delete el.dataset.enhancer;
+        }
+      });
+  }
+
+  // ---------------------------
+  // PATCH LOOP (OPTIMIZED)
+  // ---------------------------
   function patch() {
     if (ticking) return;
     ticking = true;
@@ -173,10 +220,14 @@
       addBadge();
       addToggle();
       detectLimit();
+      replaceTooltip();
       ticking = false;
     });
   }
 
+  // ---------------------------
+  // ENTER FIX
+  // ---------------------------
   function setupEnter() {
     document.addEventListener(
       "keydown",
@@ -186,7 +237,10 @@
         if (e.key !== "Enter" || e.shiftKey) return;
 
         const active = document.activeElement;
-        if (!active || !active.closest('[contenteditable="true"], textarea'))
+        if (
+          !active ||
+          !active.closest('[contenteditable="true"], textarea')
+        )
           return;
 
         const btn = getSendButton();
@@ -195,10 +249,13 @@
         e.preventDefault();
         btn.click();
       },
-      true,
+      true
     );
   }
 
+  // ---------------------------
+  // OBSERVER
+  // ---------------------------
   const observer = new MutationObserver(patch);
 
   observer.observe(document.documentElement, {
@@ -206,6 +263,9 @@
     subtree: true,
   });
 
+  // ---------------------------
+  // INIT
+  // ---------------------------
   patch();
   setupEnter();
 })();
