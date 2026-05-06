@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         ChatGPT-Unlimited
 // @homepageURL  https://github.com/klondike0x/ChatGPT-Unlimited
-// @version      2.0.0
+// @version      2.0.1
 // @description  Removes message limits in ChatGPT
 // @author       klondike0x
 // @match        *://chatgpt.com/*
 // @icon         https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/refs/heads/main/canvas.png
-// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
-// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js
+// @updateURL    https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js?update=1
+// @downloadURL  https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js?update=1
 // @grant        none
 // ==/UserScript==
 
