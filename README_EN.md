@@ -26,8 +26,8 @@
 
 ## Installation
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.  
-2. [Install the script via Tampermonkey](https://github.com/klondike0x/ChatGPT-Enhancer/releases/download/1.2/ChatGPT.Enhancer-1.2.user.js).
+1. Install [Violentmonkey](https://violentmonkey.github.io/) for your browser.  
+2. [Install the script via Violentmonkey](https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/main/ChatGPT-Unlimited.user.js).
 
 Now the "Send" button will be active, unnecessary elements removed, and Enter will send messages.
 
