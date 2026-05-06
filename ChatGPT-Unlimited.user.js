@@ -2,7 +2,7 @@
 // @name         ChatGPT-Unlimited
 // @namespace    https://github.com/klondike0x/ChatGPT-Unlimited
 // @version      2.0.0
-// @description  Убирает лимит сообщение в ChatGPT
+// @description  Removes message limits in ChatGPT
 // @author       klondike0x
 // @match        *://chatgpt.com/*
 // @icon         https://raw.githubusercontent.com/klondike0x/ChatGPT-Unlimited/refs/heads/main/canvas.png
